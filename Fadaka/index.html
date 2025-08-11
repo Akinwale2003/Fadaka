@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FADAKA — Saving Her Future, Together</title>
+  <meta name="description" content="FADAKA Africa Limited — a women-first savings, emergency loan and crowdfunding platform." />
+  <style>
+    /* ---------- Reset & base ---------- */
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --accent:#ff6b6b; /* coral */
+      --muted:#9aa4b2;
+      --glass: rgba(223, 223, 223, 0.04);
+      --max-w:1100px;
+      --radius:14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#001121 0%, #0f1724 100%);
+      color:#e6eef7;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--max-w);margin:40px auto;padding:24px}
+
+    /* ---------- Header ---------- */
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ff9a9a);display:flex;align-items:center;justify-content:center;font-weight:700;color:#08121a}
+    .brand{font-weight:700;font-size:20px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none}
+    .cta{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;color:#fff}
+
+    /* ---------- Hero ---------- */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center}
+    .eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--accent);font-weight:600;font-size:13px}
+    h1{font-size:36px;margin:12px 0 12px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .actions{display:flex;gap:12px}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#ff8b8b);border:none;padding:12px 18px;border-radius:12px;font-weight:700;color:#08121a;cursor:pointer}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px 18px;border-radius:12px;color:var(--muted);cursor:pointer}
+
+    /* hero card */
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:20px;border-radius:18px;border:1px solid rgba(255,255,255,0.03)}
+    .stats{display:flex;gap:14px;margin-top:10px}
+    .stat{background:var(--glass);padding:12px;border-radius:12px;text-align:center;flex:1}
+    .stat b{display:block;font-size:18px;color:#fff}
+    .mock-phone{background:#021026;border-radius:12px;padding:16px;height:380px;display:flex;flex-direction:column;gap:12px}
+    .mock-screen{background:linear-gradient(180deg,#0b1530,#071028);border-radius:10px;padding:14px;color:var(--muted);flex:1}
+
+    /* ---------- Features ---------- */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:38px 0}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
+    .feature h4{margin:8px 0;color:#fff}
+    .feature p{margin:0;color:var(--muted)}
+
+    /* ---------- How it works ---------- */
+    .how{display:flex;gap:20px;align-items:flex-start;margin:30px 0}
+    .steps{background:var(--card);padding:18px;border-radius:12px;flex:1}
+    .step{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
+    .step .num{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;font-weight:700}
+
+    /* ---------- CTA strip ---------- */
+    .cta-strip{margin:38px 0;padding:20px;background:linear-gradient(90deg, rgba(255,107,107,0.08), rgba(255,107,107,0.02));border-radius:12px;display:flex;align-items:center;justify-content:space-between}
+
+    /* ---------- Footer ---------- */
+    footer{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center}
+    footer .small{color:var(--muted);font-size:13px}
+
+    /* ---------- Responsiveness ---------- */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .mock-phone{height:280px}
+      .features{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      .features{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      .container{padding:18px;margin:18px auto}
+    }
+
+    /* small helper */
+    .muted{color:var(--muted)}
+    a.link{color:#fff;text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="mark">F</div>
+        <div>
+          <div class="brand">FADAKA</div>
+          <div class="small muted">Saving Her Future, Together</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#impact">Impact</a>
+        <a class="cta" href="#get-started">Get Started</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">Women-first Fintech</span>
+          <h1>Save for what matters. Borrow when it counts. Rally when it matters.</h1>
+          <p class="lead">FADAKA is a savings and crowdfunding platform built for women — targeted goals, low-cost emergency loans, and verified crowdfunding to help communities come together.</p>
+          <div class="actions">
+            <button class="btn-primary">Create account — it's free</button>
+            <button class="btn-ghost">Learn more</button>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><small class="muted">Targeted savings</small><b>Goal-based pots</b></div>
+            <div class="stat"><small class="muted">Emergency loans</small><b>30% instant access</b></div>
+            <div class="stat"><small class="muted">Crowdfunding</small><b>Verified causes</b></div>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <div style="font-weight:700">FADAKA App Preview</div>
+            <div style="color:var(--muted);font-size:13px">Beta • Mobile-first</div>
+          </div>
+          <div class="mock-phone">
+            <div style="display:flex;gap:8px;align-items:center">
+              <div style="width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#ff9a9a);display:flex;align-items:center;justify-content:center;font-weight:700;color:#08121a">FA</div>
+              <div>
+                <div style="font-weight:700">Good afternoon, Aisha</div>
+                <div class="muted" style="font-size:13px">Target: School fees · ₦120,000</div>
+              </div>
+            </div>
+            <div class="mock-screen">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                <div>
+                  <div style="font-size:13px;color:var(--muted)">Saved</div>
+                  <div style="font-weight:700;font-size:20px">₦45,000</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-size:13px;color:var(--muted)">Loan available</div>
+                  <div style="font-weight:700;font-size:18px">₦13,500</div>
+                </div>
+              </div>
+              <div style="height:10px;background:rgba(255,255,255,0.03);border-radius:999px;margin-bottom:10px"></div>
+              <div style="font-size:13px;color:var(--muted);">Active campaigns</div>
+              <div style="display:flex;gap:8px;margin-top:8px">
+                <div style="flex:1;background:rgba(255,255,255,0.02);border-radius:8px;padding:8px">Medical · Verified</div>
+                <div style="flex:1;background:rgba(255,255,255,0.02);border-radius:8px;padding:8px">Education · Verified</div>
+              </div>
+            </div>
+            <div style="display:flex;gap:8px">
+              <button class="btn-primary" style="flex:1">Open App</button>
+              <button class="btn-ghost" style="flex:1">Watch demo</button>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="features" class="features">
+        <div class="feature">
+          <div style="font-weight:800;color:var(--accent);">Targeted Savings</div>
+          <h4>Save with purpose</h4>
+          <p>Set goal-based pots (education, family, business) and watch your savings grow with a small interest reward.</p>
+        </div>
+        <div class="feature">
+          <div style="font-weight:800;color:var(--accent);">Emergency Loans</div>
+          <h4>Fast access to funds</h4>
+          <p>Get up to 30% of your savings as a zero-interest emergency loan after 6 months of consistent saving.</p>
+        </div>
+        <div class="feature">
+          <div style="font-weight:800;color:var(--accent);">Crowdfunding</div>
+          <h4>Community-backed support</h4>
+          <p>Launch verified campaigns for medical emergencies and important causes — donors give directly to beneficiaries.</p>
+        </div>
+      </section>
+
+      <section id="how" class="how">
+        <div class="steps">
+          <h3>How FADAKA Works</h3>
+          <div class="step"><div class="num">1</div><div><b>Create a goal</b><div class="muted">Choose what you’re saving for and set a target date</div></div></div>
+          <div class="step"><div class="num">2</div><div><b>Save consistently</b><div class="muted">Automate contributions or save manually — earn interest over time</div></div></div>
+          <div class="step"><div class="num">3</div><div><b>Access emergency loan</b><div class="muted">After 6 months, access up to 30% of your saved balance for urgent needs</div></div></div>
+          <div class="step"><div class="num">4</div><div><b>Rally community</b><div class="muted">If needs exceed your savings, launch a verified crowdfunding campaign</div></div></div>
+        </div>
+        <div style="flex:0.6;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
+          <h4>Why it works</h4>
+          <p class="muted">FADAKA builds on women's demonstrated saving tendencies and social capital — combining financial tools with community trust to create a powerful safety net.</p>
+          <ul class="muted">
+            <li>Women save more consistently in goal-focused structures.</li>
+            <li>Community donations are more likely when stories are verified and visible.</li>
+            <li>Mobile-first design removes barriers to access.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="cta-strip">
+        <div>
+          <div style="font-weight:800">Ready to empower your savings?</div>
+          <div class="muted">Join thousands of women building financial resilience.</div>
+        </div>
+        <div style="display:flex;gap:10px">
+          <a href="#get-started" class="btn-primary">Create Account</a>
+          <a href="#contact" class="btn-ghost">Contact Us</a>
+        </div>
+      </section>
+
+      <section id="impact">
+        <h3>Impact & Mission</h3>
+        <p class="muted">FADAKA aligns with SDG 5 (Gender Equality) and SDG 8 (Decent Work). We aim to improve financial resilience for women, reduce vulnerability to shocks, and support community-driven solutions to urgent needs.</p>
+        <div style="display:flex;gap:18px;margin-top:12px;flex-wrap:wrap">
+          <div style="background:var(--glass);padding:12px;border-radius:10px;min-width:150px;text-align:center">
+            <div style="font-weight:800">250M+</div>
+            <div class="muted">Women addressable market</div>
+          </div>
+          <div style="background:var(--glass);padding:12px;border-radius:10px;min-width:150px;text-align:center">
+            <div style="font-weight:800">$2.5B</div>
+            <div class="muted">Crowdfunding potential (SSA)</div>
+          </div>
+          <div style="background:var(--glass);padding:12px;border-radius:10px;min-width:150px;text-align:center">
+            <div style="font-weight:800">30%</div>
+            <div class="muted">Loan access of savings</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="get-started" style="margin-top:22px">
+        <h3>Get started with FADAKA</h3>
+        <p class="muted">Sign up to begin saving for what matters. For partners and press, contact us below.</p>
+        <!-- Simple, non-functional form for prototype -->
+        <form style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+          <input type="text" name="name" placeholder="Full name" style="flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff" />
+          <input type="email" name="email" placeholder="Email address" style="flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff" />
+          <select style="padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff">
+            <option>Interested in: Saving</option>
+            <option>Interested in: Crowdfunding</option>
+            <option>Interested in: Partnership</option>
+          </select>
+          <button class="btn-primary" style="padding:12px 18px;border-radius:10px;border:none">Join waitlist</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>
+        <div style="font-weight:700">FADAKA</div>
+        <div class="small muted">Saving Her Future, Together</div>
+      </div>
+      <div class="small muted">© 2025 FADAKA Africa Limited — All rights reserved</div>
+    </footer>
+  </div>
+</body>
+</html>
